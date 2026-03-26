@@ -7,3 +7,5 @@ status:
 push:
 	branch="$$(git branch --show-current)"; \
 	git push github "$$branch" && git push gitlab "$$branch"
+
+publish: push
