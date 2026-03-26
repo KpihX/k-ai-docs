@@ -2,11 +2,14 @@
 <!-- Keep this file at repo root when publishing with GitHub Pages -->
 <!-- IMPORTANT: also create .nojekyll or GitHub Pages will drop _sidebar.md -->
 
-- [🧠 k-ai Docs](README.md)
-- [📦 Request Payload](request-payload.md)
-- [🧵 Session Homogeneity](session-homogeneity.md)
-- [🧠 Memory Model](memory-model.md)
-- [🛠️ Tool Governance](tool-governance.md)
-- [⚙️ Live Config](live-config.md)
-- [🧪 Safety & Tests](safety-and-tests.md)
-- [📄 Templates](templates/README.md)
+- [🧠 k-ai Docs](../README.md)
+- [🏠 Main Project README](https://github.com/kpihx/k-ai)
+- [🌍 Live Docs Site](https://kpihx.github.io/k-ai-docs/)
+- [🗂️ Docs Source Repo](https://github.com/KpihX/k-ai-docs)
+- [📦 Request Payload](../request-payload.md)
+- [🧵 Session Homogeneity](../session-homogeneity.md)
+- [🧠 Memory Model](../memory-model.md)
+- [🛠️ Tool Governance](../tool-governance.md)
+- [⚙️ Live Config](../live-config.md)
+- [🧪 Safety & Tests](../safety-and-tests.md)
+- [📄 Templates](README.md)

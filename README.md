@@ -6,8 +6,11 @@ No abstract theory. No fake examples. The pages below exist because the system u
 
 Live site:
 
-- GitHub Pages: `https://kpihx.github.io/k-ai-docs/`
-- Source repo: `https://github.com/KpihX/k-ai-docs`
+- GitHub Pages: [kpihx.github.io/k-ai-docs](https://kpihx.github.io/k-ai-docs/)
+- Source repo: [github.com/KpihX/k-ai-docs](https://github.com/KpihX/k-ai-docs)
+- Main project repo: [github.com/kpihx/k-ai](https://github.com/kpihx/k-ai)
+- Main project README: [`../README.md`](../README.md)
+- Install guide: [`../install/README.md`](../install/README.md)
 
 ---
 
