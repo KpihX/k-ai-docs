@@ -139,6 +139,22 @@ This is why the sandbox stays rebuildable later without guesswork.
 
 ---
 
+## Verification Phase
+
+By default, the installer verifies the checkout after setup.
+
+That behavior is now configurable:
+
+- `verification.enabled: true` -> run the final verification phase
+- `verification.enabled: false` -> skip it entirely
+
+This matters in two cases:
+
+- constrained environments
+- automated harnesses where recursive test execution would be wasteful
+
+---
+
 ## Runtime Store Git
 
 The installer also prepares a narrow git repo in `~/.k-ai/`.
@@ -160,6 +176,24 @@ That behavior comes from the managed template:
 - [github.com/KpihX/k-ai/blob/master/install/.gitignore.runtime](https://github.com/KpihX/k-ai/blob/master/install/.gitignore.runtime)
 
 And the runtime can later auto-commit on chat exit with a subject derived from the session digest.
+
+---
+
+## Purge Strategy
+
+The purge path is intentionally conservative.
+
+```bash
+./scripts/purge.sh --yes
+./scripts/purge.sh --yes --runtime-dir /path/to/runtime
+```
+
+Rules:
+
+- without `--yes`, non-interactive purge aborts safely
+- `--runtime-dir` exists for installs that do not use the default `~/.k-ai/`
+- purge derives the QMD session collection from the runtime config when available
+- purge removes the uv tool install using the real PyPI distribution name, not the CLI executable name
 
 ---
 
