@@ -14,6 +14,7 @@ It decides:
 
 - whether `uv` is used
 - what happens if `uv` is missing
+- whether the runtime store becomes a local git repo
 - which tool capability families start enabled
 - which editor should open config files later
 - whether the Python sandbox is created now
@@ -138,6 +139,30 @@ This is why the sandbox stays rebuildable later without guesswork.
 
 ---
 
+## Runtime Store Git
+
+The installer also prepares a narrow git repo in `~/.k-ai/`.
+
+Tracked:
+
+- `config.yaml`
+- `MEMORY.json`
+- `sessions/index.json`
+- `sessions/*.jsonl`
+
+Ignored:
+
+- `sandbox/`
+- everything else outside the durable runtime state
+
+That behavior comes from the managed template:
+
+- [github.com/KpihX/k-ai/blob/master/install/.gitignore.runtime](https://github.com/KpihX/k-ai/blob/master/install/.gitignore.runtime)
+
+And the runtime can later auto-commit on chat exit with a subject derived from the session digest.
+
+---
+
 ## Visual Summary
 
 ```text
@@ -148,6 +173,8 @@ install.sh
    ├─ bootstrap uv or isolated fallback
    ├─ configure editor
    ├─ configure capability families
+   ├─ install managed runtime .gitignore
+   ├─ init ~/.k-ai git repo + first commit
    ├─ create python sandbox
    ├─ install default + extra sandbox packages
    └─ write ~/.k-ai/config.yaml
