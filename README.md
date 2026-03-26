@@ -24,6 +24,11 @@ Live site:
 | "How can config be changed live or edited directly without remembering YAML paths?" | [⚙️ Live Config](live-config.md) |
 | "How do memory, external context, and session metadata fit together?" | [🧠 Memory Model](memory-model.md) |
 | "Why do tests not pollute my machine?" | [🧪 Safety & Tests](safety-and-tests.md) |
+| "How does installation really work, and where do install defaults live?" | [🚀 Installation](installation.md) |
+| "What exactly is the runtime panel telling me?" | [🔍 Runtime Transparency](runtime-transparency.md) |
+| "How does first boot / `/init` / assistant identity work?" | [👋 Onboarding and Identity](onboarding-and-identity.md) |
+| "How do I recover from drift or broken state?" | [🩺 Doctor and Recovery](doctor-recovery.md) |
+| "Does the Python API behave like the CLI or not?" | [🧩 Programmatic API](programmatic-api.md) |
 
 ---
 
@@ -69,6 +74,7 @@ If you want the shortest path to understanding the project:
 1. Read [📦 Request Payload](request-payload.md)
 2. Read [🧵 Session Homogeneity](session-homogeneity.md)
 3. Read [🛠️ Tool Governance](tool-governance.md)
+4. Read [🚀 Installation](installation.md) if you are setting up or redistributing the system
 
 That is enough to understand most of the runtime behavior.
 
@@ -83,3 +89,21 @@ Reusable visual artifacts live in [templates/](templates/README.md):
 - tool approval resolution flow
 
 They are there so the docs stay visual without repeating large blocks everywhere.
+
+---
+
+## Coverage Map
+
+This doc set now covers:
+
+- request payload structure
+- sessions and semantic switching
+- memory model
+- tool governance and approvals
+- live config and editor flows
+- installation and install profiles
+- runtime transparency
+- onboarding and identity
+- doctor and recovery
+- safety and test isolation
+- programmatic API behavior
