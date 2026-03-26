@@ -6,9 +6,9 @@ These are not "business templates". They are visual and structural artifacts reu
 
 | File | Purpose |
 |------|---------|
-| [`request-payload.example.json`](request-payload.example.json) | Canonical example of what goes to the provider |
-| [`session-lifecycle.txt`](session-lifecycle.txt) | ASCII flow of session creation, switching, and finalization |
-| [`tool-approval-resolution.txt`](tool-approval-resolution.txt) | ASCII flow of tool approval resolution |
+| [`request-payload.example.json`](https://github.com/KpihX/k-ai-docs/blob/main/templates/request-payload.example.json) | Canonical example of what goes to the provider |
+| [`session-lifecycle.txt`](https://github.com/KpihX/k-ai-docs/blob/main/templates/session-lifecycle.txt) | ASCII flow of session creation, switching, and finalization |
+| [`tool-approval-resolution.txt`](https://github.com/KpihX/k-ai-docs/blob/main/templates/tool-approval-resolution.txt) | ASCII flow of tool approval resolution |
 
 ---
 

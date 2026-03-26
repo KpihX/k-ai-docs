@@ -1,5 +1,6 @@
 - [🧠 k-ai Docs](README.md)
-- [🏠 Main Project README](https://github.com/kpihx/k-ai)
+- [🏠 Main Project README](https://github.com/KpihX/k-ai/blob/master/README.md)
+- [🛠️ Install Guide](https://github.com/KpihX/k-ai/blob/master/install/README.md)
 - [🌍 Live Docs Site](https://kpihx.github.io/k-ai-docs/)
 - [🗂️ Docs Source Repo](https://github.com/KpihX/k-ai-docs)
 - [📦 Request Payload](request-payload.md)

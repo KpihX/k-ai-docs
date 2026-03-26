@@ -9,8 +9,8 @@ Live site:
 - GitHub Pages: [kpihx.github.io/k-ai-docs](https://kpihx.github.io/k-ai-docs/)
 - Source repo: [github.com/KpihX/k-ai-docs](https://github.com/KpihX/k-ai-docs)
 - Main project repo: [github.com/kpihx/k-ai](https://github.com/kpihx/k-ai)
-- Main project README: [`../README.md`](../README.md)
-- Install guide: [`../install/README.md`](../install/README.md)
+- Main project README: [github.com/KpihX/k-ai/blob/master/README.md](https://github.com/KpihX/k-ai/blob/master/README.md)
+- Install guide: [github.com/KpihX/k-ai/blob/master/install/README.md](https://github.com/KpihX/k-ai/blob/master/install/README.md)
 
 ---
 
