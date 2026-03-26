@@ -1,0 +1,33 @@
+session lifecycle
+=================
+
+boot
+ │
+ ├─ show recent sessions
+ ├─ no session created yet
+ └─ wait for first real turn
+
+first real turn
+ │
+ ├─ create session lazily
+ ├─ persist messages
+ └─ generate digest early
+
+normal evolution
+ │
+ ├─ update summary/themes/type
+ ├─ compact when needed
+ └─ keep session homogeneous
+
+intent drift
+ │
+ ├─ detect topic change
+ ├─ propose switch_session
+ ├─ finalize old session
+ └─ continue in new session
+
+exit
+ │
+ ├─ best-effort digest refresh
+ ├─ title/summary refresh if configured
+ └─ leave persisted state coherent

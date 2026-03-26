@@ -1,0 +1,8 @@
+- [🧠 k-ai Docs](README.md)
+- [📦 Request Payload](request-payload.md)
+- [🧵 Session Homogeneity](session-homogeneity.md)
+- [🧠 Memory Model](memory-model.md)
+- [🛠️ Tool Governance](tool-governance.md)
+- [⚙️ Live Config](live-config.md)
+- [🧪 Safety & Tests](safety-and-tests.md)
+- [📄 Templates](templates/README.md)

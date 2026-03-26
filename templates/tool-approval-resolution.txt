@@ -1,0 +1,27 @@
+tool approval resolution
+========================
+
+tool call proposed
+      │
+      ▼
+read catalog entry
+      │
+      ├─ protected? ---------------------- yes --> ask
+      │
+      no
+      │
+      ▼
+session override exists? ------------- yes --> use it
+      │
+      no
+      │
+      ▼
+global override exists? -------------- yes --> use it
+      │
+      no
+      │
+      ▼
+use default policy from risk
+      │
+      ├─ auto --> execute + render result
+      └─ ask  --> show proposal + wait validation
