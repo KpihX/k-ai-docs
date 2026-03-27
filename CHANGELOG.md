@@ -11,3 +11,6 @@
 - Root repo automation now knows how to push/publish the standalone docs repo
 - Installation docs now explain the managed runtime git repo (`~/.k-ai/.git`), the tracked files, and the installer-created `.gitignore.runtime` template
 - Installation docs now cover `verification.enabled`, safe purge flows, custom runtime roots, and the runtime-git identity guarantee
+- New dedicated runtime pages for native `SKILL.md` skills, lifecycle hooks, and MCP
+- Runtime transparency docs now cover skills and MCP visibility, not just provider/session counters
+- Installation docs now cover MCP capability setup and the official filesystem MCP server

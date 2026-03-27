@@ -21,6 +21,9 @@ Live site:
 | "What exactly is sent to the LLM?" | [📦 Request Payload](request-payload.md) |
 | "Why does this chat stay coherent instead of becoming a mess?" | [🧵 Session Homogeneity](session-homogeneity.md) |
 | "How do tools stay visible, controllable, auditable, and justified?" | [🛠️ Tool Governance](tool-governance.md) |
+| "How do native `SKILL.md` skills stay explicit instead of magical?" | [🧩 Skills Runtime](skills-runtime.md) |
+| "How are lifecycle hooks structured without turning the core into spaghetti?" | [🪝 Hooks Runtime](hooks-runtime.md) |
+| "How does MCP become a first-class runtime layer instead of a bolt-on?" | [🔌 MCP Runtime](mcp-runtime.md) |
 | "How can config be changed live or edited directly without remembering YAML paths?" | [⚙️ Live Config](live-config.md) |
 | "How do memory, external context, and session metadata fit together?" | [🧠 Memory Model](memory-model.md) |
 | "Why do tests not pollute my machine?" | [🧪 Safety & Tests](safety-and-tests.md) |
@@ -100,6 +103,9 @@ This doc set now covers:
 - sessions and semantic switching
 - memory model
 - tool governance and approvals
+- skills runtime and progressive loading
+- hooks runtime and lifecycle control
+- MCP runtime, roots, and protocol-backed tools
 - live config and editor flows
 - installation and install profiles
 - runtime transparency

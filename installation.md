@@ -20,6 +20,7 @@ It decides:
 - whether the Python sandbox is created now
 - which default sandbox packages get installed
 - whether `qmd` should be prepared
+- whether the bundled MCP filesystem server should be installed
 
 ---
 
@@ -111,6 +112,7 @@ The installer asks which live families should start enabled:
 - `python`
 - `shell`
 - `qmd`
+- `mcp`
 
 Those choices are then written into runtime config and later exposed live via:
 
@@ -122,6 +124,21 @@ Those choices are then written into runtime config and later exposed live via:
 
 So install-time choices are not a trap.
 They are just the initial state.
+
+---
+
+## MCP Filesystem Setup
+
+The installer can also provision the official filesystem MCP server.
+
+That means:
+
+- package: `@modelcontextprotocol/server-filesystem`
+- binary: `mcp-server-filesystem`
+- installer path: `bun` first when available, then `npm`
+
+And the result is not just "package installed somewhere".
+The runtime config is updated so that `k-ai` can immediately treat it as the first bundled MCP server.
 
 ---
 

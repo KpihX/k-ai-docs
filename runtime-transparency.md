@@ -20,6 +20,8 @@ The runtime surface can show:
 - context window
 - compaction threshold
 - active session metadata
+- active skill context
+- discovered MCP runtime state
 
 This is not ornamental UI.
 It is the debugging surface of the system.
@@ -35,6 +37,8 @@ Without runtime transparency, the user cannot easily tell:
 - whether auth came from API key or OAuth
 - whether token counts are exact or estimated
 - whether a tool-rich run is behaving as expected
+- whether skills were merely known or actually loaded
+- whether MCP servers/tools/resources are really available
 
 So the panel reduces ambiguity before ambiguity turns into bugs.
 
@@ -64,6 +68,22 @@ Type  meta
 
 This tells you the current session is an admin/control thread, not a topic thread.
 
+```text
+Skills  kpihx-soul, kpihx-duties
+Catalog  19 discovered
+```
+
+This tells you the difference between:
+
+- currently active session skill context
+- total discovered catalog size
+
+```text
+MCP  1 server | 12 tools | 0 resources | 0 prompts
+```
+
+This tells you the protocol-backed runtime is actually live, not just configured on disk.
+
 ---
 
 ## Visual Summary
@@ -74,7 +94,9 @@ runtime panel
    ├─ provider/model truth
    ├─ auth truth
    ├─ token/context truth
-   └─ session truth
+   ├─ session truth
+   ├─ skill truth
+   └─ MCP truth
 ```
 
 That is why the product feels inspectable instead of mystical.
@@ -83,4 +105,6 @@ See also:
 
 - [📦 Request Payload](request-payload.md)
 - [🧵 Session Homogeneity](session-homogeneity.md)
+- [🧩 Skills Runtime](skills-runtime.md)
+- [🔌 MCP Runtime](mcp-runtime.md)
 - [🩺 Doctor & Recovery](doctor-recovery.md)
