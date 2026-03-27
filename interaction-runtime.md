@@ -122,6 +122,13 @@ That means:
 This is implemented with PTY-backed runners rather than one subprocess per
 block. The persistence is local to the current chat session.
 
+By default, normal `!` and `>` blocks render through buffered result panels
+instead of raw PTY passthrough. That keeps the UI clean even when login shells
+emit prompt noise or terminal-control chatter.
+
+Use `/focus shell` or `/focus python` when you want fully interactive PTY
+control rather than clean buffered execution.
+
 ---
 
 ## Focus Mode
@@ -139,6 +146,8 @@ When focused:
 - they are not added to chat history
 - they are not persisted as memory
 - they are not routed through the model
+- shell echo is restored for the focused interaction, then tightened again when
+  you return to normal buffered block execution
 
 This is the correct path for:
 
@@ -147,6 +156,23 @@ This is the correct path for:
 - Python `input()`
 
 Exit focus with `Ctrl+]`.
+
+---
+
+## Streaming UI
+
+Long model responses now stream append-only.
+
+That means `k-ai` no longer keeps one ever-growing full-height Rich `Live`
+panel for the assistant answer. Instead:
+
+- the waiting phase still uses a light spinner
+- the first visible content switches to a static assistant header
+- completed content chunks are flushed progressively below it
+
+This avoids the old failure mode where long answers could clip at the bottom,
+blink on full-panel redraws, or remain invisible until enough content had been
+buffered.
 
 ---
 
