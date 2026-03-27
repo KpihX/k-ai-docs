@@ -25,7 +25,7 @@ Live site:
 | "How are lifecycle hooks structured without turning the core into spaghetti?" | [🪝 Hooks Runtime](hooks-runtime.md) |
 | "How does MCP become a first-class runtime layer instead of a bolt-on?" | [🔌 MCP Runtime](mcp-runtime.md) |
 | "How do `k-ai \"...\"`, `!`, `>`, `/?`, and focused local runners actually work?" | [⚡ Interaction Runtime](interaction-runtime.md) |
-| "Why did chat move to a full-screen app instead of stacking more Rich panels?" | [🖥️ Textual TUI](textual-ui.md) |
+| "How does the terminal UI stay readable without hiding runtime details?" | [🔍 Runtime Transparency](runtime-transparency.md) |
 | "How can config be changed live or edited directly without remembering YAML paths?" | [⚙️ Live Config](live-config.md) |
 | "How do memory, external context, and session metadata fit together?" | [🧠 Memory Model](memory-model.md) |
 | "Why do tests not pollute my machine?" | [🧪 Safety & Tests](safety-and-tests.md) |
@@ -109,7 +109,7 @@ This doc set now covers:
 - hooks runtime and lifecycle control
 - MCP runtime, roots, and protocol-backed tools
 - interaction runtime: ask, cwd, mixed input parsing, persistent local runners, and focus
-- Textual TUI layout, modal approvals, and the classic fallback path
+- terminal UI rendering, runtime panels, and interaction flow
 - live config and editor flows
 - installation and install profiles
 - runtime transparency

@@ -174,15 +174,9 @@ This avoids the old failure mode where long answers could clip at the bottom,
 blink on full-panel redraws, or remain invisible until enough content had been
 buffered.
 
-When you use the new default Textual TUI, this append-only strategy is coupled
-with a dedicated streaming slot above the transcript, so the in-flight answer is
-updated in place and only committed into the transcript when complete.
-
-If needed, the previous prompt-toolkit + Rich surface remains available through:
-
-```bash
-k-ai chat --classic-ui
-```
+This append-only strategy is designed for the stable terminal chat surface so
+that in-flight answers become visible early and long outputs do not vanish into
+one giant redraw cycle.
 
 ---
 
