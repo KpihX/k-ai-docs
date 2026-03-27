@@ -1,6 +1,6 @@
 # ⚡ Interaction Runtime
 
-This page documents the input/runtime layer added on top of the existing chat
+This page documents the input/runtime layer added on top of the chat
 brain so that `k-ai` can handle:
 
 - fast one-shot asks
@@ -173,6 +173,16 @@ panel for the assistant answer. Instead:
 This avoids the old failure mode where long answers could clip at the bottom,
 blink on full-panel redraws, or remain invisible until enough content had been
 buffered.
+
+When you use the new default Textual TUI, this append-only strategy is coupled
+with a dedicated streaming slot above the transcript, so the in-flight answer is
+updated in place and only committed into the transcript when complete.
+
+If needed, the previous prompt-toolkit + Rich surface remains available through:
+
+```bash
+k-ai chat --classic-ui
+```
 
 ---
 
