@@ -35,17 +35,17 @@ agent workflows.
 
 ## Current Layout
 
-The Textual app is intentionally split into persistent zones:
+The Textual app is intentionally split into interaction-first zones:
 
 ```text
 ┌──────────────────────────────────────────────────────────────────────┐
 │ Header                                                              │
-├───────────────┬────────────────────────────────┬─────────────────────┤
-│ Sessions      │ Streaming slot                 │ Runtime / Activity  │
-│ DataTable     │ Transcript                     │ inspector tabs      │
-│               │ RichLog                        │                     │
-│               │ Composer (TextArea)            │                     │
-├───────────────┴────────────────────────────────┴─────────────────────┤
+├────────────────────────────────┬─────────────────────────────────────┤
+│ Boot sessions (dismissible)    │ Runtime / Activity                 │
+│ Streaming slot                 │ inspector tabs                     │
+│ Transcript                     │                                     │
+│ Composer (TextArea)            │                                     │
+├────────────────────────────────┴─────────────────────────────────────┤
 │ Footer / key hints                                                  │
 └──────────────────────────────────────────────────────────────────────┘
 ```
@@ -54,8 +54,8 @@ Meaning:
 
 - the conversation stays readable
 - approvals no longer pollute the transcript
-- runtime transparency stays visible in its own pane
-- session navigation is always one focus change away
+- runtime transparency stays visible in its own pane on wide terminals
+- the session list is no longer a permanent tax on the main interaction area
 
 ---
 
@@ -86,7 +86,9 @@ The main input is a `TextArea`, not a single-line prompt.
 
 Default bindings:
 
-- `Ctrl+Enter` submit
+- `Ctrl+S` submit
+- `F2` submit
+- `Ctrl+Enter` submit when the terminal forwards it distinctly
 - `Ctrl+J` focus composer
 - `Ctrl+B` focus sessions
 - `Ctrl+R` focus runtime
@@ -95,6 +97,9 @@ Default bindings:
 
 The old slash commands still work, but they now live inside a real application
 shell instead of driving the whole UI by themselves.
+
+On narrower terminals the runtime inspector is hidden automatically so the
+composer and transcript keep enough width to remain usable.
 
 ---
 
