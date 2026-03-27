@@ -20,6 +20,7 @@ The runtime surface can show:
 - context window
 - compaction threshold
 - active session metadata
+- current working directory
 - active skill context
 - discovered MCP runtime state
 
@@ -35,6 +36,7 @@ Without runtime transparency, the user cannot easily tell:
 - which provider is actually active
 - whether the session is near compaction
 - whether auth came from API key or OAuth
+- which working directory local tools and user-side runners are actually using
 - whether token counts are exact or estimated
 - whether a tool-rich run is behaving as expected
 - whether skills were merely known or actually loaded
@@ -67,6 +69,19 @@ Type  meta
 ```
 
 This tells you the current session is an admin/control thread, not a topic thread.
+
+```text
+CWD  /home/kpihx/Work/AI/k_ai
+```
+
+This tells you where:
+
+- `shell_exec`
+- `python_exec`
+- `!` shell blocks
+- `>` Python blocks
+
+are all currently rooted.
 
 ```text
 Skills  kpihx-soul, kpihx-duties

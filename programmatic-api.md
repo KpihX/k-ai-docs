@@ -44,6 +44,11 @@ So `send()` and `send_with_tools()` now follow the same guarantees around:
 
 That is the difference between "API exists" and "API is trustworthy".
 
+The same is now true for two newer entry points:
+
+- `ChatSession(..., workspace_root=...)` for explicit cwd control
+- `await session.ask("...")` for fast one-shot, no-tools questions
+
 ---
 
 ## Mental Model
@@ -71,6 +76,18 @@ Use the programmatic path when:
 - building higher-level automation around sessions
 - testing behaviors without the TTY UI
 - reusing the same runtime in another Python system
+
+Example:
+
+```python
+from k_ai import ConfigManager, ChatSession
+import asyncio
+
+cm = ConfigManager()
+session = ChatSession(cm, workspace_root="~/Work/AI/k_ai")
+
+print(asyncio.run(session.ask("Quel est le rôle de session.py ?")))
+```
 
 ---
 

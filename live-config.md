@@ -85,6 +85,10 @@ The built-in defaults are split into fragments:
 10-ui-prompts.yaml
 20-sessions-memory.yaml
 30-runtime-governance.yaml
+40-skills.yaml
+50-hooks.yaml
+60-mcp.yaml
+70-interaction.yaml
 ```
 
 This avoids one giant unreadable config file.
@@ -123,6 +127,10 @@ k-ai config edit all
 k-ai config edit governance
         │
         └─ opens 30-runtime-governance.yaml directly
+
+k-ai config edit interaction
+        │
+        └─ opens 70-interaction.yaml directly
 ```
 
 Editor resolution order:

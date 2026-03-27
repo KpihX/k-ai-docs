@@ -10,6 +10,7 @@
 - [🧩 Skills Runtime](skills-runtime.md)
 - [🪝 Hooks Runtime](hooks-runtime.md)
 - [🔌 MCP Runtime](mcp-runtime.md)
+- [⚡ Interaction Runtime](interaction-runtime.md)
 - [⚙️ Live Config](live-config.md)
 - [🚀 Installation](installation.md)
 - [🔍 Runtime Transparency](runtime-transparency.md)
